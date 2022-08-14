@@ -10,7 +10,7 @@
 
 - To run Unit tests, `npm run test` will run the automated tests assuming no user input, whilst `npm run test:manual:windows` and `npm run test:manual:linux` will test the path with user input
 
-### User Input
+### Input
 For user input, follow these steps when running `npm run start:manual:{OS}`;
 - Enter the Grid Size,
 	- Format - M N eg: `10 2`
@@ -20,10 +20,11 @@ For user input, follow these steps when running `npm run start:manual:{OS}`;
 	- COMMANDS must be only `F, R, L`
 - To finish adding Robot Details, enter no values. 
 
+-Note, the above is true for editing the scenario.json as well
+
 ## Assumptions
 - Robots are not aware of each other, and cannot impact each other (i.e. if two robots are on the same space, they do not crash)
 - Robots are immediately lost, and cannot re-enter the grid at all
-- 
 
 ## Future Work
 - Better validation, especially around the Commands. Could use Regex (though wanted to focus on task, and less on fighting with Regex!). 
@@ -34,3 +35,4 @@ For user input, follow these steps when running `npm run start:manual:{OS}`;
 - Better CLI messages - they feel a little clunky at the moment
 - Addition of things like Linter/Prettier
 - Pull out Commands & Directions into an Enum.
+- Improved Folder Structure
