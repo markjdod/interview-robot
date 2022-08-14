@@ -1,10 +1,15 @@
 const moveRobot = require('./moveRobot');
 
 test('Correct output for non LOST', () => {
-    const gridSize = ['4', '8']
+    const gridSize = {
+        maxX: 4,
+        maxY: 8,
+        minX: 0,
+        minY: 0
+    }
     const robotDetails = {
-        initX: 2,
-        initY: 3,
+        xLocation: 2,
+        yLocation: 3,
         direction: 'E',
         commands: 'LFRFF'.split('')
     }
@@ -12,10 +17,15 @@ test('Correct output for non LOST', () => {
     expect(output).toEqual('(4, 4, E)')
 });
 test('Correct output for LOST', () => {
-    const gridSize = ['4', '8']
+    const gridSize = {
+        maxX: 4,
+        maxY: 8,
+        minX: 0,
+        minY: 0
+    }
     const robotDetails = {
-        initX: 0,
-        initY: 2,
+        xLocation: 0,
+        yLocation: 2,
         direction: 'N',
         commands: 'FFLFRFF'.split('')
     }
@@ -23,10 +33,15 @@ test('Correct output for LOST', () => {
     expect(output).toEqual('(0, 4, W) LOST')
 })
 test('Correct output for non LOST', () => {
-    const gridSize = ['4', '8']
+    const gridSize = {
+        maxX: 4,
+        maxY: 8,
+        minX: 0,
+        minY: 0
+    }
     const robotDetails = {
-        initX: 2,
-        initY: 3,
+        xLocation: 2,
+        yLocation: 3,
         direction: 'N',
         commands: 'FLLFR'.split('')
     }
@@ -34,10 +49,15 @@ test('Correct output for non LOST', () => {
     expect(output).toEqual('(2, 3, W)')
 });
 test('Correct output for LOST', () => {
-    const gridSize = ['4', '8']
+    const gridSize = {
+        maxX: 4,
+        maxY: 8,
+        minX: 0,
+        minY: 0
+    }
     const robotDetails = {
-        initX: 1,
-        initY: 0,
+        xLocation: 1,
+        yLocation: 0,
         direction: 'S',
         commands: 'FFRLF'.split('')
     }

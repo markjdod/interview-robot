@@ -1,18 +1,10 @@
 const scenarioDetails = require("./scenarioDetails")
 const moveRobot = require("./moveRobot")
+const defaultScenario = require("./scenario.json")
 
-const details = scenarioDetails({
-    gridSize: '11 2',
-    robots: ['(10, 3, E) LFLF', '(0, 0, N) NRLF']
+const details = process.env.MANUAL ? scenarioDetails() : scenarioDetails(defaultScenario);
+
+details.robotDetails.forEach(robot => {
+    const finalRobotLocation = moveRobot(details.gridDimensions, robot);
+    console.log(finalRobotLocation)    
 });
-
-// const details = scenarioDetails();
-// console.log(details)
-
-// Move some robots
-
-const currentRobot = details.robotDetails[0];
-
-const movedBot = moveRobot(details.gridSize, currentRobot);
-
-console.log(movedBot)

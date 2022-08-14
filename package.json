@@ -6,7 +6,11 @@
   "scripts": {
     "test": "jest",
     "test:manual:windows": "set MANUAL_TESTS=true && jest",
-    "test:manual:linux": "MANUAL_TESTS=true && jest"
+    "test:manual:linux": "MANUAL_TESTS=true && jest",
+    "start": "node ./main.js",
+    "start:manual:windows": "set MANUAL=true && npm run start",
+    "start:manual:linux": "MANUAL=true && npm run start"
+    
   },
   "author": "",
   "license": "ISC",
