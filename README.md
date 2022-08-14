@@ -26,7 +26,7 @@ For user input, follow these steps when running `npm run start:manual:{OS}`;
 - 
 
 ## Future Work
-- Better validation, especially around the Commands. Ideally better build time validation as well.
+- Better validation, especially around the Commands. Could use Regex (though wanted to focus on task, and less on fighting with Regex!). 
 - Better handling of the inputs (they have to space & comma perfect at the moment)
 - Further refactoring potentially. The move Forward section in moveRobot.js is rather ugly, and it can probably be refactored a little more (though the times I was playing with it, it lost its readability). Rotate Left & Right could probably also be made common.
 - More Unit tests. There's nothing on Main.js at the moment, and I mostly follow many of the happy paths.
